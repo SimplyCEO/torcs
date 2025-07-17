@@ -79,7 +79,7 @@ void gfuiLoadFonts(void)
 	for(i = 0; i < 4; i++) {
 		size = (int)GfParmGetNum(param, "Menu Font", keySize[i], (char*)NULL, 10.0);
 		gfuiFont[i] = new GfuiFontClass(buf);
-		gfuiFont[i]->create(size);
+		gfuiFont[i]->create(size*12);
 	}
 
 	fontName = GfParmGetStr(param, "Console Font", "name", "b7.glf");
@@ -88,7 +88,7 @@ void gfuiLoadFonts(void)
 	for(i = 0; i < 4; i++) {
 		size = (int)GfParmGetNum(param, "Console Font", keySize[i], (char*)NULL, 10.0);
 		gfuiFont[i+4] = new GfuiFontClass(buf);
-		gfuiFont[i+4]->create(size);
+		gfuiFont[i+4]->create(size*12);
 	}
 
 	fontName = GfParmGetStr(param, "Digital Font", "name", "digital.glf");
